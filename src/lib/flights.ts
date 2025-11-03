@@ -5,4 +5,5 @@ export type RecentQuery = { from?: string; to?: string; created_at?: string }
 
 export const getPopularRoutes = () => client.flights.popularRoutes()
 export const getRecentQueries = () => client.flights.recentQueries()
+export const searchFlights = (q: { from: string; to: string; date?: string }) => client.flights.search(q)
 
